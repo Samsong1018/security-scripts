@@ -22,4 +22,18 @@ python passwordstrength.py
 
 ---
 
+### `caesar_cipher.py`
+A command-line tool to encrypt and decrypt text using the Caesar cipher.
+
+**Features:**
+- Encrypt or decrypt any text with a custom shift (1-25)
+- Preserves case and non-alphabetic characters
+
+**Usage:**
+```bash
+python3 caesar_cipher.py
+```
+
+---
+
 *More scripts to come as learning progresses.*
