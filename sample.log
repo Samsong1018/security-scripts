@@ -1,0 +1,41 @@
+[2026-04-07T08:15:23.445Z] INFO    - Application started successfully
+[2026-04-07T08:15:24.123Z] DEBUG   - Loading configuration from /etc/app/config.yaml
+[2026-04-07T08:15:25.567Z] INFO    - Database connection established to postgres://db.local:5432
+[2026-04-07T08:15:26.892Z] DEBUG   - API server listening on 0.0.0.0:8080
+[2026-04-07T08:16:12.234Z] INFO    - User 'jsmith' logged in from 192.168.1.105
+[2026-04-07T08:16:45.678Z] DEBUG   - Processing request GET /api/users/profile
+[2026-04-07T08:17:03.421Z] INFO    - User 'jsmith' accessed resource: /documents/report_q1.pdf
+[2026-04-07T08:18:22.756Z] WARNING - High memory usage detected: 87% (3.2GB/3.7GB)
+[2026-04-07T08:19:41.123Z] INFO    - User 'mchen' logged in from 10.0.0.52
+[2026-04-07T08:20:15.889Z] ERROR   - Failed database query: Connection timeout after 30s
+[2026-04-07T08:20:16.234Z] DEBUG   - Retrying database connection (attempt 1/3)
+[2026-04-07T08:20:17.567Z] INFO    - Database connection restored
+[2026-04-07T08:21:33.445Z] WARNING - Suspicious activity: Multiple failed login attempts from 203.0.113.45 (5 attempts in 2 minutes)
+[2026-04-07T08:21:45.678Z] INFO    - User 'jsmith' logged out
+[2026-04-07T08:22:12.234Z] ERROR   - Authentication failed for user 'admin' from 203.0.113.45
+[2026-04-07T08:22:13.456Z] ERROR   - Authentication failed for user 'admin' from 203.0.113.45
+[2026-04-07T08:22:14.567Z] ERROR   - Authentication failed for user 'admin' from 203.0.113.45
+[2026-04-07T08:22:15.678Z] WARNING - IP 203.0.113.45 has been blacklisted due to excessive failed login attempts
+[2026-04-07T08:23:01.234Z] DEBUG   - Scanning for security vulnerabilities
+[2026-04-07T08:23:42.890Z] INFO    - Security scan completed: 0 critical, 2 medium, 1 low severity issues found
+[2026-04-07T08:24:15.123Z] WARNING - SSL certificate expiration warning: Certificate for api.example.com expires in 14 days
+[2026-04-07T08:25:08.456Z] INFO    - User 'apadilla' logged in from 172.16.0.88
+[2026-04-07T08:26:33.789Z] DEBUG   - Cache hit rate: 92.3% (1247/1351 requests)
+[2026-04-07T08:27:01.234Z] ERROR   - Disk space low on /var/log partition: 94% full (18.8GB/20GB)
+[2026-04-07T08:27:02.345Z] INFO    - Log rotation triggered automatically
+[2026-04-07T08:28:15.567Z] WARNING - Slow query detected: SELECT * FROM orders - execution time: 4.2s (threshold: 1s)
+[2026-04-07T08:29:44.890Z] INFO    - Backup process started
+[2026-04-07T08:35:22.123Z] INFO    - Backup completed successfully: 8.4GB backed up in 5 minutes 38 seconds
+[2026-04-07T08:35:45.456Z] DEBUG   - Backup verification checksum: OK
+[2026-04-07T08:36:12.789Z] INFO    - User 'apadilla' logged out
+[2026-04-07T08:37:01.234Z] WARNING - Unusual traffic pattern detected: 342 requests/min (normal: 85 requests/min)
+[2026-04-07T08:37:02.345Z] DEBUG   - Initiating DDoS protection measures
+[2026-04-07T08:37:15.567Z] ERROR   - Rate limit exceeded for 198.51.100.23, blocking IP for 15 minutes
+[2026-04-07T08:38:23.890Z] INFO    - Malware scan completed: No threats detected
+[2026-04-07T08:39:01.234Z] DEBUG   - Scheduled maintenance window: Applying security patches
+[2026-04-07T08:39:45.567Z] INFO    - Security patches applied successfully, services restarted
+[2026-04-07T08:40:12.890Z] WARNING - Configuration drift detected: /etc/app/config.yaml has been modified externally
+[2026-04-07T08:41:33.123Z] ERROR   - Service 'worker-pool-3' has stopped unexpectedly
+[2026-04-07T08:41:34.234Z] DEBUG   - Attempting automatic restart of 'worker-pool-3'
+[2026-04-07T08:41:36.456Z] INFO    - Service 'worker-pool-3' restarted successfully
+[2026-04-07T08:42:01.789Z] INFO    - System health check: All services operational
