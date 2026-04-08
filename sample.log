@@ -39,3 +39,47 @@
 [2026-04-07T08:41:34.234Z] DEBUG   - Attempting automatic restart of 'worker-pool-3'
 [2026-04-07T08:41:36.456Z] INFO    - Service 'worker-pool-3' restarted successfully
 [2026-04-07T08:42:01.789Z] INFO    - System health check: All services operational
+[2026-04-07T08:43:10.112Z] DEBUG   - Processing request POST /api/auth/refresh
+[2026-04-07T08:43:11.345Z] INFO    - User 'mchen' accessed resource: /admin/audit/export.csv
+[2026-04-07T08:43:44.678Z] WARNING - Repeated 404 responses detected for /wp-login.php from 198.51.100.77 (12 requests in 1 minute)
+[2026-04-07T08:44:03.901Z] ERROR   - Authentication failed for user 'support' from 198.51.100.77
+[2026-04-07T08:44:05.122Z] ERROR   - Authentication failed for user 'support' from 198.51.100.77
+[2026-04-07T08:44:07.334Z] WARNING - Account lockout applied to user 'support' for 10 minutes after repeated failures
+[2026-04-07T08:44:55.667Z] DEBUG   - Queue depth for 'email-dispatch' is 48 jobs
+[2026-04-07T08:45:12.890Z] INFO    - User 'rwilson' logged in from 192.168.1.118
+[2026-04-07T08:45:40.153Z] INFO    - User 'rwilson' accessed resource: /reports/security/incidents_april.xlsx
+[2026-04-07T08:46:18.476Z] WARNING - CPU usage spike detected on node app-02: 91% for 45 seconds
+[2026-04-07T08:46:22.709Z] DEBUG   - Autoscaling evaluation triggered for service 'api-gateway'
+[2026-04-07T08:46:30.933Z] INFO    - Autoscaling action complete: Added 1 instance to service 'api-gateway'
+[2026-04-07T08:47:01.244Z] ERROR   - Failed to write audit event to /var/log/app/audit.log: No space left on device
+[2026-04-07T08:47:03.588Z] WARNING - Audit logging degraded: buffering events in memory
+[2026-04-07T08:47:29.811Z] INFO    - Emergency cleanup completed: Freed 2.4GB on /var/log
+[2026-04-07T08:47:31.045Z] INFO    - Audit logging restored to normal operation
+[2026-04-07T08:48:12.366Z] DEBUG   - Processing request GET /api/admin/users?role=analyst
+[2026-04-07T08:48:52.690Z] WARNING - Slow API response: GET /api/admin/users completed in 2.8s
+[2026-04-07T08:49:21.934Z] INFO    - User 'apadilla' logged in from 172.16.0.88
+[2026-04-07T08:49:58.157Z] INFO    - User 'apadilla' changed password successfully
+[2026-04-07T08:50:33.401Z] DEBUG   - Token cleanup job removed 183 expired sessions
+[2026-04-07T08:51:05.744Z] WARNING - GeoIP mismatch detected for user 'jsmith': previous login US-CA, current request from DE-BE
+[2026-04-07T08:51:09.988Z] ERROR   - Multi-factor authentication failed for user 'jsmith' from 145.14.152.9
+[2026-04-07T08:51:11.219Z] ERROR   - Authentication failed for user 'jsmith' from 145.14.152.9
+[2026-04-07T08:51:14.553Z] WARNING - Suspicious activity: Possible credential stuffing detected from 145.14.152.9 against 6 accounts
+[2026-04-07T08:51:16.786Z] INFO    - Firewall rule deployed: Temporary deny for source 145.14.152.9
+[2026-04-07T08:52:02.028Z] DEBUG   - Scanning uploaded file invoice_batch_044.zip with antivirus engine
+[2026-04-07T08:52:04.372Z] ERROR   - Malware detected in upload invoice_batch_044.zip: Trojan.GenericKD.45129
+[2026-04-07T08:52:05.604Z] WARNING - Upload quarantined and user session suspended pending review
+[2026-04-07T08:52:45.927Z] INFO    - Incident ticket SEC-1842 created automatically for malware detection event
+[2026-04-07T08:53:18.150Z] DEBUG   - Database replication lag: 184ms on replica db-replica-1
+[2026-04-07T08:53:55.493Z] INFO    - User 'rwilson' logged out
+[2026-04-07T08:54:27.716Z] WARNING - TLS handshake failures increased above baseline on listener 443/tcp
+[2026-04-07T08:54:31.960Z] DEBUG   - Capturing packet samples for handshake diagnostics
+[2026-04-07T08:55:12.283Z] INFO    - TLS configuration reloaded successfully on edge proxy
+[2026-04-07T08:55:48.507Z] ERROR   - Service 'reporting-engine' exceeded memory limit and was OOM-killed
+[2026-04-07T08:55:50.741Z] DEBUG   - Restart policy triggered for 'reporting-engine'
+[2026-04-07T08:55:55.984Z] INFO    - Service 'reporting-engine' restarted successfully
+[2026-04-07T08:56:40.228Z] WARNING - Deprecated API endpoint used: /api/v1/export by user 'mchen'
+[2026-04-07T08:57:09.551Z] INFO    - Compliance report generation completed for tenant 'northwind-finance'
+[2026-04-07T08:57:42.874Z] DEBUG   - Scheduled task 'rotate-keys' entering precheck phase
+[2026-04-07T08:58:15.117Z] INFO    - Encryption key rotation completed successfully for 12 active services
+[2026-04-07T08:58:49.361Z] WARNING - NTP drift warning on host bastion-01: offset 182ms exceeds threshold 100ms
+[2026-04-07T08:59:20.684Z] INFO    - End-of-hour summary: 14 warnings, 10 errors, 3 blocked IPs, 1 quarantined upload

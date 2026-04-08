@@ -107,6 +107,7 @@ class LogAnalyzer:
         self.results_text.tag_config("error_line", foreground="#e74c3c")
         self.results_text.tag_config("warning_line", foreground="#f39c12")
         self.results_text.tag_config("info", foreground="#95a5a6")
+        self.results_text.tag_config("failed_login", foreground="#00d0ff", font=("Courier New", 9, "bold"))
 
     def select_file(self) -> None:
         """Handle file selection."""
@@ -133,6 +134,7 @@ class LogAnalyzer:
 
         errors = []
         warnings = []
+        error_keywords = ["failed login", "suspicious activity", "unauthorized access", "repeated 404", "unusual traffic", "malware detected", "data breach", "ddos attack", "sql injection", "xss attack", "authentication failure", "permission denied", "access violation", "admin"]
 
         try:
             with open(self.chosen_file, 'r', encoding='utf-8', errors='ignore') as file:
@@ -149,7 +151,10 @@ class LogAnalyzer:
 
             if errors:
                 for error in errors:
-                    self.results_text.insert(tk.END, f"  {error}\n", "error_line")
+                    if any(keyword in error.lower() for keyword in error_keywords):
+                        self.results_text.insert(tk.END, f"  {error}\n", "failed_login")
+                    else:
+                        self.results_text.insert(tk.END, f"  {error}\n", "error_line")
             else:
                 self.results_text.insert(tk.END, "  No errors found\n", "info")
 
@@ -158,7 +163,10 @@ class LogAnalyzer:
 
             if warnings:
                 for warning in warnings:
-                    self.results_text.insert(tk.END, f"  {warning}\n", "warning_line")
+                    if any(keyword in warning.lower() for keyword in error_keywords):
+                        self.results_text.insert(tk.END, f"  {warning}\n", "failed_login")
+                    else:
+                        self.results_text.insert(tk.END, f"  {warning}\n", "warning_line")
             else:
                 self.results_text.insert(tk.END, "  No warnings found\n", "info")
 
