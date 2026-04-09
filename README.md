@@ -66,4 +66,23 @@ python3 port_scanner.py
 
 ---
 
+### `LogAnalyzer.py`
+A GUI tool for analyzing log files and flagging suspicious security activity.
+
+**Features:**
+- Browse and load any `.log` or `.txt` file
+- Separates output into **Errors** and **Warnings** sections
+- Highlights security-relevant lines (failed logins, SQL injection, XSS attacks, unauthorized access, DDoS, malware, and more) in a distinct color
+- Dark-themed scrollable results panel with color-coded severity
+
+**Requirements:**
+- Python 3.x (tkinter is included in the standard library)
+
+**Usage:**
+```bash
+python LogAnalyzer.py
+```
+
+---
+
 *More scripts to come as learning progresses.*
