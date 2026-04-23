@@ -85,4 +85,41 @@ python LogAnalyzer.py
 
 ---
 
+### `Integrity_checker.py`
+A file integrity monitor that detects unauthorized changes to a folder by comparing SHA-256 hashes against a saved baseline.
+
+**Features:**
+- Hashes every file in a target folder recursively
+- Saves a per-file baseline to `baseline.json` on first run
+- On subsequent runs, reports exactly which files were **modified**, **added**, or **removed**
+- `--save-baseline` flag to force a fresh baseline after intentional changes
+
+**Usage:**
+```bash
+# First run — generates baseline.json
+python3 Integrity_checker.py
+
+# Any later run — checks for changes
+python3 Integrity_checker.py
+
+# Reset baseline after intentional changes
+python3 Integrity_checker.py --save-baseline
+```
+
+**Example output:**
+```
+[ALERT] Changes detected!
+
+  MODIFIED (1):
+    configs/app.conf
+  ADDED (1):
+    intruder.txt
+  REMOVED (1):
+    readme.txt
+```
+
+An `example_files/` folder is included to demo the script against.
+
+---
+
 *More scripts to come as learning progresses.*

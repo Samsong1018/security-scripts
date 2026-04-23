@@ -1,0 +1,7 @@
+# Reference checksums (SHA256) — generated at baseline
+# Compare against current values to detect tampering
+
+readme.txt        = (run script to populate)
+configs/app.conf  = (run script to populate)
+configs/users.conf = (run script to populate)
+data/records.csv  = (run script to populate)
