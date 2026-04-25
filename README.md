@@ -66,6 +66,32 @@ python3 port_scanner.py
 
 ---
 
+### `ping_scanner.py`
+A command-line tool that pings every host on a /24 subnet and reports which are reachable.
+
+> **Educational use only.**
+> Only scan networks you own or have explicit written permission to scan.
+
+**Features:**
+- Accepts any of `192.168.1`, `192.168.1.0`, or `192.168.1.100` as the network input
+- Pings `.1`–`.254` (skips network and broadcast addresses)
+- Prints live status per host and a final summary of reachable hosts
+
+**Usage:**
+```bash
+python3 ping_scanner.py
+```
+
+**Example output:**
+```
+192.168.1.1: Open
+192.168.1.2: Closed
+...
+Open hosts (2): ['192.168.1.1', '192.168.1.10']
+```
+
+---
+
 ### `LogAnalyzer.py`
 A GUI tool for analyzing log files and flagging suspicious security activity.
 
